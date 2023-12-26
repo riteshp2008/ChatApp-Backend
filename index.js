@@ -21,6 +21,10 @@ mongoose.connect(process.env.MONGO_URL, {
   app.use("/api/auth", userRoutes);
   app.use("/api/messages", messageRoutes);
 
+  app.get("/", (req, res) => {
+    res.send("Server is running.");
+  }); 
+
 
 const server = app.listen(process.env.PORT || 5000, () => {
   console.log(`Server is running on port: ${process.env.PORT}`);
