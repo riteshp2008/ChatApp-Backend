@@ -28,7 +28,7 @@ const server = app.listen(process.env.PORT || 5000, () => {
 
 const io = socket(server, {
   cors: {
-    origin: "https://chatapp-backend-02xr.onrender.com",
+    origin: "https://chat-yard-riteshp2008.vercel.app/",
     credentials: true,
   },
 });
